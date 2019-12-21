@@ -1,0 +1,992 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10B39F8843B8FDF0C0FAD4E7BA35BA26 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88E670820746609DCC41D8291B8A83F3 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D62320ED2DCC581DCAF25AAF57B7A48 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F9375742B780623C8B3F1B526C8D60D6 /* BEMCheckBoxGroup.m */; };
+		34C03E9B8867AAF2F8219C561E028158 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2E37144833C8B1ED4D20F51DA665D2 /* BEMCheckBox.m */; };
+		366523E61317AD95F05135274C413A23 /* Pods-Objc-ToDoListTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FDF6686523D0FBFCD90535DF88BBC5 /* Pods-Objc-ToDoListTests-dummy.m */; };
+		440B789CADC85F8B042259A57E746116 /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 34EB69741BA45BED897194612C1B9DE4 /* BEMCheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47C3FE85408DFBA85B012B3DACFBB17D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		4B880E4436C7C6D8F425B881D6A0C5AE /* Pods-Objc-ToDoList-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C5D23E9416CED5A6D63474F4036A0321 /* Pods-Objc-ToDoList-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E5ED19953BF721E65A86B3D46088727 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6AC9825766BE25DF689B4787B1FAE8A7 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74952D33FD3699D0D09CA2FAE527D6C0 /* BEMAnimationManager.m */; };
+		70682B3DD3AAE40E5BC3979441429D41 /* Pods-Objc-ToDoList-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2227B4AB7940BF089A708FB06B08E903 /* Pods-Objc-ToDoList-dummy.m */; };
+		90B9963667D132C65B4288CB5A0D0554 /* BEMCheckBox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F49C1252F89A68F69410420576F2B7 /* BEMCheckBox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		993040C64F9E2969A74AAC699EF355F4 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D0CD9747222F97813E47C1BC257AEC4 /* BEMAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9CA99C53F5542A2DC8A7ED4B5177F3B1 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBD725C267F8937D6A7FD4434010B680 /* BEMPathManager.m */; };
+		AB3806F28D051E2C5CDF3B7D19146155 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		ACCBB59AAC74F8A9042CCCC8BFF91CB6 /* Pods-Objc-ToDoListTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8D59C79DFBF24486640A1F84A1242A /* Pods-Objc-ToDoListTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0A7DDAD8DAE1DCA237DAFCB9EBA4339 /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0012187B74CF7E6D27C4293A1EE3B0B8 /* BEMPathManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9FD5B564F4F20FA53151F6CA8EC9931 /* BEMCheckBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9375D99855B288D7A7ECC0BF06A3C35 /* BEMCheckBox-dummy.m */; };
+		D33F1F5923967F0BFF0EBAF0636DBB1F /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B50F18ED135710CED311A1A4F92821B /* BEMCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E159C47D3384596E3088A4EBEE8C6069 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		E82CFB0FAEAC0CD2748D6B5B0B836F5E /* Pods-Objc-ToDoList-Objc-ToDoListUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB9E1BCAEE8E11A11FADB31C0D86B076 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08C48F487060CCD49BEB6ABCF89A59AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4315C804D18AF023D6D89A8281BF589;
+			remoteInfo = BEMCheckBox;
+		};
+		B0D08A07DC7C23DBB90FC17E6B85F703 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4315C804D18AF023D6D89A8281BF589;
+			remoteInfo = BEMCheckBox;
+		};
+		CC5A10C61C4A776F2B5059F30B20BE2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCE72CD67562D3DE4D1B96AA2C2ED441;
+			remoteInfo = "Pods-Objc-ToDoList";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0012187B74CF7E6D27C4293A1EE3B0B8 /* BEMPathManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPathManager.h; path = Classes/BEMPathManager.h; sourceTree = "<group>"; };
+		13160176E226E1A13F7D64BFC6EEDF1C /* Pods-Objc-ToDoListTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Objc-ToDoListTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		14C48023C7F31CD8B2624DB15C370958 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1BFC73305318E477918EF716DCABF749 /* Pods-Objc-ToDoList-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Objc-ToDoList-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2227B4AB7940BF089A708FB06B08E903 /* Pods-Objc-ToDoList-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Objc-ToDoList-dummy.m"; sourceTree = "<group>"; };
+		22FDF6686523D0FBFCD90535DF88BBC5 /* Pods-Objc-ToDoListTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Objc-ToDoListTests-dummy.m"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		34EB69741BA45BED897194612C1B9DE4 /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBoxGroup.h; path = Classes/BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		3C3471C12A952271BDC7FE7E40CBE292 /* Pods-Objc-ToDoList-Objc-ToDoListUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3F282D213AB9D1ECA1228C986CC9D2BA /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BEMCheckBox.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447434CC980692D24B32CDF0BC30F853 /* BEMCheckBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BEMCheckBox.modulemap; sourceTree = "<group>"; };
+		4B50F18ED135710CED311A1A4F92821B /* BEMCheckBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBox.h; path = Classes/BEMCheckBox.h; sourceTree = "<group>"; };
+		4E2E37144833C8B1ED4D20F51DA665D2 /* BEMCheckBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBox.m; path = Classes/BEMCheckBox.m; sourceTree = "<group>"; };
+		554384643304EE7BBD31E6ECA3EF782D /* BEMCheckBox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BEMCheckBox.xcconfig; sourceTree = "<group>"; };
+		58517A48F5615F078C6997D2559BEACB /* Pods_Objc_ToDoList_Objc_ToDoListUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Objc_ToDoList_Objc_ToDoListUITests.framework; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D22EBF0E8CC71253221C4430E0D87D /* Pods-Objc-ToDoList-Objc-ToDoListUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests-frameworks.sh"; sourceTree = "<group>"; };
+		6C3564EBFF2A04605027B1648F403665 /* Pods-Objc-ToDoListTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Objc-ToDoListTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7283CFCE370FF7E12DC0EBDDE63EC6B1 /* Pods-Objc-ToDoList-Objc-ToDoListUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests.modulemap"; sourceTree = "<group>"; };
+		74952D33FD3699D0D09CA2FAE527D6C0 /* BEMAnimationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAnimationManager.m; path = Classes/BEMAnimationManager.m; sourceTree = "<group>"; };
+		88E670820746609DCC41D8291B8A83F3 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests-umbrella.h"; sourceTree = "<group>"; };
+		8D0CD9747222F97813E47C1BC257AEC4 /* BEMAnimationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAnimationManager.h; path = Classes/BEMAnimationManager.h; sourceTree = "<group>"; };
+		90D5723A5F528BF3198A202E509302E9 /* BEMCheckBox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-prefix.pch"; sourceTree = "<group>"; };
+		941AF490CD02D6EAD2BB78061C44A707 /* Pods-Objc-ToDoListTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Objc-ToDoListTests.modulemap"; sourceTree = "<group>"; };
+		97C2976C7D87F85A86263D7262B1F780 /* Pods-Objc-ToDoList.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Objc-ToDoList.modulemap"; sourceTree = "<group>"; };
+		99F49C1252F89A68F69410420576F2B7 /* BEMCheckBox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AB8D59C79DFBF24486640A1F84A1242A /* Pods-Objc-ToDoListTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Objc-ToDoListTests-umbrella.h"; sourceTree = "<group>"; };
+		AB9AE87945BDFDBE4E680F0D8832D88D /* Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0AD1DC4C5BA21DA6818B2B83F9117EF /* Pods-Objc-ToDoListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objc-ToDoListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4340E4254CA2BEF621F375CFBB91AAF /* Pods-Objc-ToDoListTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Objc-ToDoListTests-Info.plist"; sourceTree = "<group>"; };
+		B951DFD8A4B1FD61EB0C9A818235F2F9 /* Pods-Objc-ToDoList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objc-ToDoList.debug.xcconfig"; sourceTree = "<group>"; };
+		BC2651ACBDD42F4304A79C525D0C85C3 /* Pods-Objc-ToDoList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objc-ToDoList.release.xcconfig"; sourceTree = "<group>"; };
+		BD7D743296A6FA68DE37B883FC668719 /* Pods_Objc_ToDoList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Objc_ToDoList.framework; path = "Pods-Objc-ToDoList.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F848ECB90E11605EAA7C6F6431E63A /* Pods-Objc-ToDoList-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Objc-ToDoList-Info.plist"; sourceTree = "<group>"; };
+		C5D23E9416CED5A6D63474F4036A0321 /* Pods-Objc-ToDoList-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Objc-ToDoList-umbrella.h"; sourceTree = "<group>"; };
+		C8F04D99692EF9A0B724536E5CE16407 /* Pods_Objc_ToDoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Objc_ToDoListTests.framework; path = "Pods-Objc-ToDoListTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DADFBFBE11DC8F1F84CC431F00C71123 /* Pods-Objc-ToDoList-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Objc-ToDoList-acknowledgements.plist"; sourceTree = "<group>"; };
+		DB8C997E2BC3BEAD6246C446A0764EA2 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE00022C75B0640F9CC76FB0874290AE /* BEMCheckBox-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BEMCheckBox-Info.plist"; sourceTree = "<group>"; };
+		E9375D99855B288D7A7ECC0BF06A3C35 /* BEMCheckBox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEMCheckBox-dummy.m"; sourceTree = "<group>"; };
+		F106D1B0768069B65E4F8CD2BB90C329 /* Pods-Objc-ToDoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Objc-ToDoListTests.release.xcconfig"; sourceTree = "<group>"; };
+		F687CE290FB8F5F4128CC8F3ACD769CA /* Pods-Objc-ToDoList-Objc-ToDoListUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests-Info.plist"; sourceTree = "<group>"; };
+		F9375742B780623C8B3F1B526C8D60D6 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBoxGroup.m; path = Classes/BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		FB9E1BCAEE8E11A11FADB31C0D86B076 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Objc-ToDoList-Objc-ToDoListUITests-dummy.m"; sourceTree = "<group>"; };
+		FBD56BF2825572D53634DECEB5F703D1 /* Pods-Objc-ToDoList-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Objc-ToDoList-frameworks.sh"; sourceTree = "<group>"; };
+		FBD725C267F8937D6A7FD4434010B680 /* BEMPathManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CE899056344E73BC912F49095DCFC1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E159C47D3384596E3088A4EBEE8C6069 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC6F0C7F7C9E4BF7BD3E7386E1744AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C3FE85408DFBA85B012B3DACFBB17D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADEAD8C85D06CC0C72A766203696EE57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB3806F28D051E2C5CDF3B7D19146155 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C97AAB987747819C9DA638367A973C39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E5ED19953BF721E65A86B3D46088727 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BA3A0DEE272CCD5C1FEC252EF67CA01 /* Pods-Objc-ToDoList-Objc-ToDoListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7283CFCE370FF7E12DC0EBDDE63EC6B1 /* Pods-Objc-ToDoList-Objc-ToDoListUITests.modulemap */,
+				DB8C997E2BC3BEAD6246C446A0764EA2 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-acknowledgements.markdown */,
+				14C48023C7F31CD8B2624DB15C370958 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-acknowledgements.plist */,
+				FB9E1BCAEE8E11A11FADB31C0D86B076 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-dummy.m */,
+				65D22EBF0E8CC71253221C4430E0D87D /* Pods-Objc-ToDoList-Objc-ToDoListUITests-frameworks.sh */,
+				F687CE290FB8F5F4128CC8F3ACD769CA /* Pods-Objc-ToDoList-Objc-ToDoListUITests-Info.plist */,
+				88E670820746609DCC41D8291B8A83F3 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-umbrella.h */,
+				AB9AE87945BDFDBE4E680F0D8832D88D /* Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig */,
+				3C3471C12A952271BDC7FE7E40CBE292 /* Pods-Objc-ToDoList-Objc-ToDoListUITests.release.xcconfig */,
+			);
+			name = "Pods-Objc-ToDoList-Objc-ToDoListUITests";
+			path = "Target Support Files/Pods-Objc-ToDoList-Objc-ToDoListUITests";
+			sourceTree = "<group>";
+		};
+		0E93EF6A88016CB08A63B301420C08F6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				447434CC980692D24B32CDF0BC30F853 /* BEMCheckBox.modulemap */,
+				554384643304EE7BBD31E6ECA3EF782D /* BEMCheckBox.xcconfig */,
+				E9375D99855B288D7A7ECC0BF06A3C35 /* BEMCheckBox-dummy.m */,
+				DE00022C75B0640F9CC76FB0874290AE /* BEMCheckBox-Info.plist */,
+				90D5723A5F528BF3198A202E509302E9 /* BEMCheckBox-prefix.pch */,
+				99F49C1252F89A68F69410420576F2B7 /* BEMCheckBox-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BEMCheckBox";
+			sourceTree = "<group>";
+		};
+		3156B2EB677553992DAB4786C502ED35 /* BEMCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				8D0CD9747222F97813E47C1BC257AEC4 /* BEMAnimationManager.h */,
+				74952D33FD3699D0D09CA2FAE527D6C0 /* BEMAnimationManager.m */,
+				4B50F18ED135710CED311A1A4F92821B /* BEMCheckBox.h */,
+				4E2E37144833C8B1ED4D20F51DA665D2 /* BEMCheckBox.m */,
+				34EB69741BA45BED897194612C1B9DE4 /* BEMCheckBoxGroup.h */,
+				F9375742B780623C8B3F1B526C8D60D6 /* BEMCheckBoxGroup.m */,
+				0012187B74CF7E6D27C4293A1EE3B0B8 /* BEMPathManager.h */,
+				FBD725C267F8937D6A7FD4434010B680 /* BEMPathManager.m */,
+				0E93EF6A88016CB08A63B301420C08F6 /* Support Files */,
+			);
+			name = BEMCheckBox;
+			path = BEMCheckBox;
+			sourceTree = "<group>";
+		};
+		5937184B52E8D93FCD63CD894AD33011 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F3532881CB386454A8E97868353C70D /* Pods-Objc-ToDoList */,
+				0BA3A0DEE272CCD5C1FEC252EF67CA01 /* Pods-Objc-ToDoList-Objc-ToDoListUITests */,
+				B5DD8C6C64AE1ECBCAF77193A90125EB /* Pods-Objc-ToDoListTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6609F0A2CBB096B0635CEFDD1E1D3974 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3156B2EB677553992DAB4786C502ED35 /* BEMCheckBox */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F3532881CB386454A8E97868353C70D /* Pods-Objc-ToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				97C2976C7D87F85A86263D7262B1F780 /* Pods-Objc-ToDoList.modulemap */,
+				1BFC73305318E477918EF716DCABF749 /* Pods-Objc-ToDoList-acknowledgements.markdown */,
+				DADFBFBE11DC8F1F84CC431F00C71123 /* Pods-Objc-ToDoList-acknowledgements.plist */,
+				2227B4AB7940BF089A708FB06B08E903 /* Pods-Objc-ToDoList-dummy.m */,
+				FBD56BF2825572D53634DECEB5F703D1 /* Pods-Objc-ToDoList-frameworks.sh */,
+				C3F848ECB90E11605EAA7C6F6431E63A /* Pods-Objc-ToDoList-Info.plist */,
+				C5D23E9416CED5A6D63474F4036A0321 /* Pods-Objc-ToDoList-umbrella.h */,
+				B951DFD8A4B1FD61EB0C9A818235F2F9 /* Pods-Objc-ToDoList.debug.xcconfig */,
+				BC2651ACBDD42F4304A79C525D0C85C3 /* Pods-Objc-ToDoList.release.xcconfig */,
+			);
+			name = "Pods-Objc-ToDoList";
+			path = "Target Support Files/Pods-Objc-ToDoList";
+			sourceTree = "<group>";
+		};
+		B1D0961E0CE4A65644796298C8259309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F282D213AB9D1ECA1228C986CC9D2BA /* BEMCheckBox.framework */,
+				BD7D743296A6FA68DE37B883FC668719 /* Pods_Objc_ToDoList.framework */,
+				58517A48F5615F078C6997D2559BEACB /* Pods_Objc_ToDoList_Objc_ToDoListUITests.framework */,
+				C8F04D99692EF9A0B724536E5CE16407 /* Pods_Objc_ToDoListTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5DD8C6C64AE1ECBCAF77193A90125EB /* Pods-Objc-ToDoListTests */ = {
+			isa = PBXGroup;
+			children = (
+				941AF490CD02D6EAD2BB78061C44A707 /* Pods-Objc-ToDoListTests.modulemap */,
+				13160176E226E1A13F7D64BFC6EEDF1C /* Pods-Objc-ToDoListTests-acknowledgements.markdown */,
+				6C3564EBFF2A04605027B1648F403665 /* Pods-Objc-ToDoListTests-acknowledgements.plist */,
+				22FDF6686523D0FBFCD90535DF88BBC5 /* Pods-Objc-ToDoListTests-dummy.m */,
+				B4340E4254CA2BEF621F375CFBB91AAF /* Pods-Objc-ToDoListTests-Info.plist */,
+				AB8D59C79DFBF24486640A1F84A1242A /* Pods-Objc-ToDoListTests-umbrella.h */,
+				B0AD1DC4C5BA21DA6818B2B83F9117EF /* Pods-Objc-ToDoListTests.debug.xcconfig */,
+				F106D1B0768069B65E4F8CD2BB90C329 /* Pods-Objc-ToDoListTests.release.xcconfig */,
+			);
+			name = "Pods-Objc-ToDoListTests";
+			path = "Target Support Files/Pods-Objc-ToDoListTests";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				6609F0A2CBB096B0635CEFDD1E1D3974 /* Pods */,
+				B1D0961E0CE4A65644796298C8259309 /* Products */,
+				5937184B52E8D93FCD63CD894AD33011 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		203B13F6AD46BE3FD00FEC275A605E75 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCBB59AAC74F8A9042CCCC8BFF91CB6 /* Pods-Objc-ToDoListTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5875E5CEA599236A15D7BF27FB6A6079 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B880E4436C7C6D8F425B881D6A0C5AE /* Pods-Objc-ToDoList-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69935178540012849EEEC8DD8A9646BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B39F8843B8FDF0C0FAD4E7BA35BA26 /* Pods-Objc-ToDoList-Objc-ToDoListUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E187464BFEBAD7A3CAE1BBA35A9845B6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993040C64F9E2969A74AAC699EF355F4 /* BEMAnimationManager.h in Headers */,
+				90B9963667D132C65B4288CB5A0D0554 /* BEMCheckBox-umbrella.h in Headers */,
+				D33F1F5923967F0BFF0EBAF0636DBB1F /* BEMCheckBox.h in Headers */,
+				440B789CADC85F8B042259A57E746116 /* BEMCheckBoxGroup.h in Headers */,
+				B0A7DDAD8DAE1DCA237DAFCB9EBA4339 /* BEMPathManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		264B27DF58D3D2C72FC8B25E47343A12 /* Pods-Objc-ToDoList-Objc-ToDoListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA096EB5E75EE494D5A2C34161B0E50A /* Build configuration list for PBXNativeTarget "Pods-Objc-ToDoList-Objc-ToDoListUITests" */;
+			buildPhases = (
+				69935178540012849EEEC8DD8A9646BA /* Headers */,
+				F9259FAF6C37A3C28A4C797C661DA153 /* Sources */,
+				C97AAB987747819C9DA638367A973C39 /* Frameworks */,
+				3C6E22D86E07AD03EF535FCAF66D2BDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DC3C0CC1CF72F366FCA1A721917F4A4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Objc-ToDoList-Objc-ToDoListUITests";
+			productName = "Pods-Objc-ToDoList-Objc-ToDoListUITests";
+			productReference = 58517A48F5615F078C6997D2559BEACB /* Pods_Objc_ToDoList_Objc_ToDoListUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A8E8EA98683C6A4EA788DD70AF21A3F9 /* Pods-Objc-ToDoListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CC8544929BAEAB3494D719168801F8A /* Build configuration list for PBXNativeTarget "Pods-Objc-ToDoListTests" */;
+			buildPhases = (
+				203B13F6AD46BE3FD00FEC275A605E75 /* Headers */,
+				A58A54B7C4E754A63EA69731794A744B /* Sources */,
+				ADEAD8C85D06CC0C72A766203696EE57 /* Frameworks */,
+				C830376600A7205C967234C6FFBE27E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				530C16B4C08E559754FCFCB6D9BCB024 /* PBXTargetDependency */,
+			);
+			name = "Pods-Objc-ToDoListTests";
+			productName = "Pods-Objc-ToDoListTests";
+			productReference = C8F04D99692EF9A0B724536E5CE16407 /* Pods_Objc_ToDoListTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B4315C804D18AF023D6D89A8281BF589 /* BEMCheckBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE39F7342AB06BF9CCDA02C04B9917DB /* Build configuration list for PBXNativeTarget "BEMCheckBox" */;
+			buildPhases = (
+				E187464BFEBAD7A3CAE1BBA35A9845B6 /* Headers */,
+				FB9D098C0CD664EBED131E3BB3DB6BBA /* Sources */,
+				6CE899056344E73BC912F49095DCFC1F /* Frameworks */,
+				2BBF788A27E4949A9DDE0B617A29542A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BEMCheckBox;
+			productName = BEMCheckBox;
+			productReference = 3F282D213AB9D1ECA1228C986CC9D2BA /* BEMCheckBox.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CCE72CD67562D3DE4D1B96AA2C2ED441 /* Pods-Objc-ToDoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 066F72E81E9CA8EC45DA264DE5A266E3 /* Build configuration list for PBXNativeTarget "Pods-Objc-ToDoList" */;
+			buildPhases = (
+				5875E5CEA599236A15D7BF27FB6A6079 /* Headers */,
+				CF787FA386E79376E10694E3E8E19D94 /* Sources */,
+				7BC6F0C7F7C9E4BF7BD3E7386E1744AF /* Frameworks */,
+				911EF645996F15028089A8A265289369 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				340E0E49DFB5D7C38A6BA2BB88961A90 /* PBXTargetDependency */,
+			);
+			name = "Pods-Objc-ToDoList";
+			productName = "Pods-Objc-ToDoList";
+			productReference = BD7D743296A6FA68DE37B883FC668719 /* Pods_Objc_ToDoList.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B1D0961E0CE4A65644796298C8259309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4315C804D18AF023D6D89A8281BF589 /* BEMCheckBox */,
+				CCE72CD67562D3DE4D1B96AA2C2ED441 /* Pods-Objc-ToDoList */,
+				264B27DF58D3D2C72FC8B25E47343A12 /* Pods-Objc-ToDoList-Objc-ToDoListUITests */,
+				A8E8EA98683C6A4EA788DD70AF21A3F9 /* Pods-Objc-ToDoListTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BBF788A27E4949A9DDE0B617A29542A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C6E22D86E07AD03EF535FCAF66D2BDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		911EF645996F15028089A8A265289369 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C830376600A7205C967234C6FFBE27E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A58A54B7C4E754A63EA69731794A744B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				366523E61317AD95F05135274C413A23 /* Pods-Objc-ToDoListTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF787FA386E79376E10694E3E8E19D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70682B3DD3AAE40E5BC3979441429D41 /* Pods-Objc-ToDoList-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9259FAF6C37A3C28A4C797C661DA153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E82CFB0FAEAC0CD2748D6B5B0B836F5E /* Pods-Objc-ToDoList-Objc-ToDoListUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB9D098C0CD664EBED131E3BB3DB6BBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AC9825766BE25DF689B4787B1FAE8A7 /* BEMAnimationManager.m in Sources */,
+				B9FD5B564F4F20FA53151F6CA8EC9931 /* BEMCheckBox-dummy.m in Sources */,
+				34C03E9B8867AAF2F8219C561E028158 /* BEMCheckBox.m in Sources */,
+				1D62320ED2DCC581DCAF25AAF57B7A48 /* BEMCheckBoxGroup.m in Sources */,
+				9CA99C53F5542A2DC8A7ED4B5177F3B1 /* BEMPathManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DC3C0CC1CF72F366FCA1A721917F4A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BEMCheckBox;
+			target = B4315C804D18AF023D6D89A8281BF589 /* BEMCheckBox */;
+			targetProxy = 08C48F487060CCD49BEB6ABCF89A59AE /* PBXContainerItemProxy */;
+		};
+		340E0E49DFB5D7C38A6BA2BB88961A90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BEMCheckBox;
+			target = B4315C804D18AF023D6D89A8281BF589 /* BEMCheckBox */;
+			targetProxy = B0D08A07DC7C23DBB90FC17E6B85F703 /* PBXContainerItemProxy */;
+		};
+		530C16B4C08E559754FCFCB6D9BCB024 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Objc-ToDoList";
+			target = CCE72CD67562D3DE4D1B96AA2C2ED441 /* Pods-Objc-ToDoList */;
+			targetProxy = CC5A10C61C4A776F2B5059F30B20BE2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0523D02105AA46B70D6D92C6AB199369 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC2651ACBDD42F4304A79C525D0C85C3 /* Pods-Objc-ToDoList.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Objc-ToDoList/Pods-Objc-ToDoList-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Objc-ToDoList/Pods-Objc-ToDoList.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2BCF715C5B34A12474BF004669B204CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B951DFD8A4B1FD61EB0C9A818235F2F9 /* Pods-Objc-ToDoList.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Objc-ToDoList/Pods-Objc-ToDoList-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Objc-ToDoList/Pods-Objc-ToDoList.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A14B07279B3F7A7070A94DC6488AB81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 554384643304EE7BBD31E6ECA3EF782D /* BEMCheckBox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox.modulemap";
+				PRODUCT_MODULE_NAME = BEMCheckBox;
+				PRODUCT_NAME = BEMCheckBox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5027C6089E69EADCFF9255218FBA6809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AD1DC4C5BA21DA6818B2B83F9117EF /* Pods-Objc-ToDoListTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Objc-ToDoListTests/Pods-Objc-ToDoListTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Objc-ToDoListTests/Pods-Objc-ToDoListTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		52F2E8F03AC60830372CF9F3146F8212 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C3471C12A952271BDC7FE7E40CBE292 /* Pods-Objc-ToDoList-Objc-ToDoListUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Objc-ToDoList-Objc-ToDoListUITests/Pods-Objc-ToDoList-Objc-ToDoListUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Objc-ToDoList-Objc-ToDoListUITests/Pods-Objc-ToDoList-Objc-ToDoListUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		703AD5DD41D5CF58C3F5A0F83E0F3907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9AE87945BDFDBE4E680F0D8832D88D /* Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Objc-ToDoList-Objc-ToDoListUITests/Pods-Objc-ToDoList-Objc-ToDoListUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Objc-ToDoList-Objc-ToDoListUITests/Pods-Objc-ToDoList-Objc-ToDoListUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DC10A72EFE373775DFF369C2B583021 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F106D1B0768069B65E4F8CD2BB90C329 /* Pods-Objc-ToDoListTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Objc-ToDoListTests/Pods-Objc-ToDoListTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Objc-ToDoListTests/Pods-Objc-ToDoListTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		BFE2987A7ADB3F0CFFCE2DE81219D898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 554384643304EE7BBD31E6ECA3EF782D /* BEMCheckBox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox.modulemap";
+				PRODUCT_MODULE_NAME = BEMCheckBox;
+				PRODUCT_NAME = BEMCheckBox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		066F72E81E9CA8EC45DA264DE5A266E3 /* Build configuration list for PBXNativeTarget "Pods-Objc-ToDoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BCF715C5B34A12474BF004669B204CB /* Debug */,
+				0523D02105AA46B70D6D92C6AB199369 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC8544929BAEAB3494D719168801F8A /* Build configuration list for PBXNativeTarget "Pods-Objc-ToDoListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5027C6089E69EADCFF9255218FBA6809 /* Debug */,
+				8DC10A72EFE373775DFF369C2B583021 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE39F7342AB06BF9CCDA02C04B9917DB /* Build configuration list for PBXNativeTarget "BEMCheckBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A14B07279B3F7A7070A94DC6488AB81 /* Debug */,
+				BFE2987A7ADB3F0CFFCE2DE81219D898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA096EB5E75EE494D5A2C34161B0E50A /* Build configuration list for PBXNativeTarget "Pods-Objc-ToDoList-Objc-ToDoListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				703AD5DD41D5CF58C3F5A0F83E0F3907 /* Debug */,
+				52F2E8F03AC60830372CF9F3146F8212 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

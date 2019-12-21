@@ -1,0 +1,16 @@
+PODS:
+  - BEMCheckBox (1.4.1)
+
+DEPENDENCIES:
+  - BEMCheckBox (~> 1.4)
+
+SPEC REPOS:
+  trunk:
+    - BEMCheckBox
+
+SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+
+PODFILE CHECKSUM: 39421d46c33effc14b5751bc365ce5e8a73b8e58
+
+COCOAPODS: 1.8.4
