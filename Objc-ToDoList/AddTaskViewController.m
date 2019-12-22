@@ -55,6 +55,9 @@
     
     ArchivedTaskDataController *dataController = [ArchivedTaskDataController new];
     [dataController addNewTask:newTask];
+    
+    // return to Pending list VC
+    [self.navigationController popViewControllerAnimated:true];
 }
 
 // Adjust Error label, if inputs are not valid
