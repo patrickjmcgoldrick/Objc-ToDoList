@@ -9,7 +9,6 @@
 #import "PendingTasksViewController.h"
 
 #import "AppDelegate.h"
-//#import "Task+CoreDataProperties.h"
 #import "ArchivedTaskDataController.h"
 #import "PendingTaskCell.h"
 
@@ -17,11 +16,8 @@
     
     __weak IBOutlet UITableView *tableView;
     
-    AppDelegate *appDelegate;
-    NSManagedObjectContext *context;
     ArchivedTaskDataController *dataController;
     NSMutableArray *pendingTasks;
-
 }
 
 @end
@@ -39,8 +35,6 @@
     self.dateFormatter.dateFormat = @"MM/dd/yyyy";
 
     [self reloadArchiveData];
-          
-//    [self testCoreDate];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -61,38 +55,12 @@
     }
 }
 
-// MARK: Core Data
-- (void) testCoreDate {
-    
-    appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
-    context = appDelegate.persistentContainer.viewContext;
-    /*
-    // Save Data
-    NSManagedObject *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"Task" inManagedObjectContext: context];
-    [entityObject setValue:@"Costco" forKey:@"title"];
-    [entityObject setValue:@"Pho\nChicken" forKey:@"desc"];
-    [entityObject setValue:[[NSDate alloc] init] forKey:@"createdDate"];
-    [entityObject setValue:[[NSDate alloc] init] forKey:@"dueDate"];
-    [entityObject setValue:[[NSDate alloc] init] forKey:@"completedDate"];
-    [entityObject setValue:false forKey:@"completed"];
-    
-    [appDelegate saveContext];
-    */
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Task"];
-    NSArray *tasks = [context executeFetchRequest:fetchRequest error:nil];
-    
-    for(int i=0; i<[tasks count]; i++) {
-        NSLog(@"title: %@", [tasks[i] title]);
-        NSLog(@"desc: %@", [tasks[i] desc]);
-    }
-}
-
 // MARK: Tableview Data Source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return pendingTasks.count;
 }
-
+#import "AppDelegate.h"
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -134,14 +102,5 @@
     [self reloadArchiveData];
     [tableView reloadData];
 }
-
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-   
-    
-}
-
 
 @end
