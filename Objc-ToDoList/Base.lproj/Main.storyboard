@@ -10,7 +10,7 @@
         <!--Settings-->
         <scene sceneID="rCg-Y5-3n9">
             <objects>
-                <viewController id="bgB-BZ-g1n" customClass="SettingsViewController" customModule="Objc_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bgB-BZ-g1n" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ItH-Xk-gK1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,9 +27,6 @@
                                     <segment title="NSArchiver"/>
                                     <segment title="Core Data"/>
                                 </segments>
-                                <connections>
-                                    <action selector="segChangeDataSource:" destination="bgB-BZ-g1n" eventType="valueChanged" id="l3K-xB-fMM"/>
-                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,9 +39,6 @@
                         <viewLayoutGuide key="safeArea" id="rjB-La-25J"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="YB7-a4-SJU"/>
-                    <connections>
-                        <outlet property="segDataSource" destination="Sgd-Eo-xLV" id="M23-cF-UVJ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5nr-bT-SrH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -280,13 +274,13 @@
         <!--Completed-->
         <scene sceneID="idP-DS-4gp">
             <objects>
-                <viewController id="ZsR-w3-22Q" customClass="CompletedTasksViewController" customModule="Objc_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZsR-w3-22Q" customClass="CompletedTasksViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yVg-hc-aE9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vys-GA-Q0A">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CompletedCell" rowHeight="68" id="9iJ-eg-GPQ" customClass="CompletedTaskCell" customModule="Objc_ToDoList" customModuleProvider="target">
@@ -334,15 +328,8 @@
                                                 <constraint firstItem="xBi-bM-9Ib" firstAttribute="trailing" secondItem="x7O-OX-iak" secondAttribute="trailingMargin" id="mbR-bU-Spj"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="lblCompletedDate" destination="JXL-gu-RT9" id="4DE-Ct-rnW"/>
-                                            <outlet property="lblTitle" destination="xBi-bM-9Ib" id="nL4-aR-dbi"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="ZsR-w3-22Q" id="Iot-UX-7Bk"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -355,9 +342,6 @@
                         <viewLayoutGuide key="safeArea" id="Wp3-Ar-djv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Completed" id="MsR-kR-dBn"/>
-                    <connections>
-                        <outlet property="tableView" destination="Vys-GA-Q0A" id="kH7-cB-cXc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFc-cO-g9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -375,6 +359,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="VOj-gO-z2g" kind="relationship" relationship="viewControllers" id="Kzc-qW-zGs"/>
+                        <segue destination="eRA-B4-RhM" kind="relationship" relationship="viewControllers" id="OIJ-MV-k3Z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JUs-xs-7th" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

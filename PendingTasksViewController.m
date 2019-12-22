@@ -16,11 +16,9 @@
     
     __weak IBOutlet UITableView *tableView;
     
-    NSMutableArray *pendingTasks;
-    
     AppDelegate *appDelegate;
     NSManagedObjectContext *context;
-    NSArray *dictionaries;
+    NSMutableArray *pendingTasks;
 }
 
 @end
@@ -39,7 +37,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    NSLog(@"viewDidAppear");
+    // setup Date Formatter
+    self.dateFormatter = [NSDateFormatter new];
+    self.dateFormatter.dateFormat = @"MM/dd/yyyy";
+
     [self reloadArchiveData];
     tableView.reloadData;
 }
@@ -55,6 +56,7 @@
         pendingTasks = [NSMutableArray array];
     }
 }
+
 // MARK: Core Data
 - (void) testCoreDate {
     
@@ -83,6 +85,7 @@
 
 }
 
+// MARK: Tableview Data Source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return pendingTasks.count;
@@ -96,9 +99,23 @@
     
     cell.lblTitle.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).title;
     cell.lblDesc.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).desc;
-    //cell.lblDueDate.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).desc;
-
+    NSDate *date = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).dueDate;
+    NSString *dateString = [NSString stringWithFormat:@"Due: %@", [self.dateFormatter stringFromDate:date]];
+    cell.lblDueDate.text = dateString;
+    
+    // BEM Checkbox
+    cell.bemCheckBox.delegate = self;
+    cell.tag = (int)indexPath.row;
+    cell.bemCheckBox.on = false;
+    
+    
     return cell;
+}
+
+// MARK: BEM CheckBox Delegate
+- (void)animationDidStopForCheckBox:(BEMCheckBox *)checkBox {
+    
+    NSLog(@"animatoin complete");
 }
 
 

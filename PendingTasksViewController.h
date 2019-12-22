@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BEMCheckBox.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PendingTasksViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface PendingTasksViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, BEMCheckBoxDelegate>
+
+@property NSDateFormatter *dateFormatter;
 
 - (void) testCoreDate;
 
