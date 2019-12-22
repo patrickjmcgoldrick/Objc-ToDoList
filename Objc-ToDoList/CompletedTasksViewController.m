@@ -15,12 +15,13 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
 @end
 
 @implementation CompletedTasksViewController
 
 ArchivedTaskDataController *dataController;
-
+NSDateFormatter *dateFormatter;
 NSMutableArray *completedTasks;
 
 // MARK: ViewDidLoad
@@ -31,8 +32,14 @@ NSMutableArray *completedTasks;
     self.tableView.delegate = self;
     
     dataController = [ArchivedTaskDataController new];
+    
+    // setup Date Formatter
+    dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateFormat = @"'Completed: 'MM/dd/yyyy";
+
 }
 
+// MARK: ViewWillAppear
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
@@ -40,17 +47,7 @@ NSMutableArray *completedTasks;
     [self.tableView reloadData];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-
+// MARK: TableView Data Source Delegate
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return completedTasks.count;
@@ -63,7 +60,8 @@ NSMutableArray *completedTasks;
 
     ArchivableTask *task = completedTasks[(int)indexPath.row];
     cell.lblTitle.text = task.title;
-    cell.lblCompleted.text = @"Done!";
+    NSDate *date = task.completedDate;
+    cell.lblCompleted.text = [dateFormatter stringFromDate:date];
     
     return cell;
 }
