@@ -28,9 +28,8 @@ const NSString *COMPLETED_TASKS_KEY = @"CompltedTasks";
     [self save:tasks :PENDING_TASKS_KEY];
 }
 
-// Move task from Pending list to Completed list
-- (void)markTaskCompleted:(ArchivableTask *)task {
-    
+- (void)deletePendingTask:(ArchivableTask *)task {
+
     // read pending list
     NSMutableArray *pendingList = [self getPendingTasks];
     
@@ -42,16 +41,24 @@ const NSString *COMPLETED_TASKS_KEY = @"CompltedTasks";
             break;
         }
     }
-    
     // save pending list
     [self save:pendingList :PENDING_TASKS_KEY];
+}
 
+// Move task from Pending list to Completed list
+- (void)markTaskCompleted:(ArchivableTask *)task {
+    
+    // delete task from Pending list
+    [self deletePendingTask:task];
+    
     // update task with completed date
     task.completedDate = [NSDate new];
     task.completed = true;
     
-    // add 'task' to Completed list
+    // read Completed list
     NSMutableArray *completedList = [self getCompletedTasks];
+    
+    // add 'task' to Completed list
     [completedList addObject:task];
     
     // save Completed list

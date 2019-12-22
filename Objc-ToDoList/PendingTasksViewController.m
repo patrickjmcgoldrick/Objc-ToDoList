@@ -113,6 +113,18 @@
     return cell;
 }
 
+// MARK: TableView Delegate Methods
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        ArchivableTask *task = (ArchivableTask *) pendingTasks[(int)indexPath.row];
+        [dataController deletePendingTask:task];
+        [self reloadArchiveData];
+        [tableView reloadData];
+    }
+}
+
 // MARK: BEM CheckBox Delegate
 - (void)animationDidStopForCheckBox:(BEMCheckBox *)checkBox {
     

@@ -12,6 +12,7 @@
 @interface ArchivedTaskDataController : NSObject
 
 - (void)addNewTask:(ArchivableTask *)task;
+- (void)deletePendingTask:(ArchivableTask *)task;
 - (void)markTaskCompleted:(ArchivableTask *)task;
 
 - (NSMutableArray *)getPendingTasks;
