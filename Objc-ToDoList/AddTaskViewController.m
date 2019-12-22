@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // clear error messge
+    _lblErrors.text = @"";
+    
     // setup Date Formatter
     self.dateFormatter = [NSDateFormatter new];
     self.dateFormatter.dateFormat = @"MM/dd/yyyy";
@@ -30,6 +33,8 @@
     [self.datePicker setDatePickerMode:UIDatePickerModeDate];
     [self.datePicker addTarget:self action:@selector(onDatePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
     self.tfDueDate.inputView = self.datePicker;
+    
+    // update to default date (today)
     [self onDatePickerValueChanged:self.datePicker];
 }
 
