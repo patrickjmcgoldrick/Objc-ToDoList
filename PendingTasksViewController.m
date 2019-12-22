@@ -7,10 +7,11 @@
 //
 
 #import "PendingTasksViewController.h"
-#import "PendingTaskCell.h"
+
 #import "AppDelegate.h"
 //#import "Task+CoreDataProperties.h"
 #import "ArchivedTaskDataSource.h"
+#import "PendingTaskCell.h"
 
 @interface PendingTasksViewController ()  {
     
@@ -18,7 +19,9 @@
     
     AppDelegate *appDelegate;
     NSManagedObjectContext *context;
+    ArchivedTaskDataSource *dataController;
     NSMutableArray *pendingTasks;
+
 }
 
 @end
@@ -29,6 +32,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    dataController = [ArchivedTaskDataSource new];
+
+    // setup Date Formatter
+    self.dateFormatter = [NSDateFormatter new];
+    self.dateFormatter.dateFormat = @"MM/dd/yyyy";
+
     [self reloadArchiveData];
           
 //    [self testCoreDate];
@@ -36,18 +45,13 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    // setup Date Formatter
-    self.dateFormatter = [NSDateFormatter new];
-    self.dateFormatter.dateFormat = @"MM/dd/yyyy";
 
     [self reloadArchiveData];
-    tableView.reloadData;
+    [tableView reloadData];
 }
 
 - (void)reloadArchiveData {
     
-    ArchivedTaskDataSource *dataController = [ArchivedTaskDataSource new];
     NSMutableArray *pendingArray = [dataController getPendingTasks];
 
     if (pendingArray != nil) {
@@ -77,12 +81,10 @@
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Task"];
     NSArray *tasks = [context executeFetchRequest:fetchRequest error:nil];
     
-
     for(int i=0; i<[tasks count]; i++) {
         NSLog(@"title: %@", [tasks[i] title]);
         NSLog(@"desc: %@", [tasks[i] desc]);
     }
-
 }
 
 // MARK: Tableview Data Source
@@ -108,14 +110,17 @@
     cell.tag = (int)indexPath.row;
     cell.bemCheckBox.on = false;
     
-    
     return cell;
 }
 
 // MARK: BEM CheckBox Delegate
 - (void)animationDidStopForCheckBox:(BEMCheckBox *)checkBox {
     
-    NSLog(@"animatoin complete");
+    int index = (int)checkBox.tag;
+    ArchivableTask *task = pendingTasks[index];
+    [dataController markTaskCompleted:task];
+    [self reloadArchiveData];
+    [tableView reloadData];
 }
 
 
