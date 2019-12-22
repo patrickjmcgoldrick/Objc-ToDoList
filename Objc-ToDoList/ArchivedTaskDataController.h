@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ArchivableTask.h"
 
-@interface ArchivedTaskDataSource : NSObject
+@interface ArchivedTaskDataController : NSObject
 
 - (void)addNewTask:(ArchivableTask *)task;
 - (void)markTaskCompleted:(ArchivableTask *)task;

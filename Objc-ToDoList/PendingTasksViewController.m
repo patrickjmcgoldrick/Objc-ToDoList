@@ -10,7 +10,7 @@
 
 #import "AppDelegate.h"
 //#import "Task+CoreDataProperties.h"
-#import "ArchivedTaskDataSource.h"
+#import "ArchivedTaskDataController.h"
 #import "PendingTaskCell.h"
 
 @interface PendingTasksViewController ()  {
@@ -19,7 +19,7 @@
     
     AppDelegate *appDelegate;
     NSManagedObjectContext *context;
-    ArchivedTaskDataSource *dataController;
+    ArchivedTaskDataController *dataController;
     NSMutableArray *pendingTasks;
 
 }
@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataController = [ArchivedTaskDataSource new];
+    dataController = [ArchivedTaskDataController new];
 
     // setup Date Formatter
     self.dateFormatter = [NSDateFormatter new];

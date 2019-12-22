@@ -8,7 +8,7 @@
 
 #import "CompletedTasksViewController.h"
 
-#import "ArchivedTaskDataSource.h"
+#import "ArchivedTaskDataController.h"
 #import "CompletedTaskCell.h"
 
 @interface CompletedTasksViewController ()
@@ -19,7 +19,7 @@
 
 @implementation CompletedTasksViewController
 
-ArchivedTaskDataSource *dataController;
+ArchivedTaskDataController *dataController;
 
 NSMutableArray *completedTasks;
 
@@ -30,7 +30,7 @@ NSMutableArray *completedTasks;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
-    dataController = [ArchivedTaskDataSource new];
+    dataController = [ArchivedTaskDataController new];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

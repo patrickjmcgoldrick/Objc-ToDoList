@@ -23,7 +23,7 @@
 		5E79A9BB23AD8CCE00CA375D /* CompletedTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9BA23AD8CCD00CA375D /* CompletedTaskCell.m */; };
 		5E79A9BE23AD8CF200CA375D /* PendingTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9BD23AD8CF200CA375D /* PendingTaskCell.m */; };
 		5E79A9CD23AEAC6D00CA375D /* ArchivableTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */; };
-		5E79A9DB23AFF2D400CA375D /* ArchivedTaskDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9D923AFF2D400CA375D /* ArchivedTaskDataSource.m */; };
+		5E79A9DB23AFF2D400CA375D /* ArchivedTaskDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9D923AFF2D400CA375D /* ArchivedTaskDataController.m */; };
 		5E79A9DE23AFF36200CA375D /* PendingTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9DD23AFF36200CA375D /* PendingTasksViewController.m */; };
 		5E79A9E323AFF44000CA375D /* Task+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9E123AFF44000CA375D /* Task+CoreDataProperties.m */; };
 		5E79A9E423AFF44000CA375D /* Task+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9E223AFF44000CA375D /* Task+CoreDataClass.m */; };
@@ -83,8 +83,8 @@
 		5E79A9BD23AD8CF200CA375D /* PendingTaskCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PendingTaskCell.m; sourceTree = "<group>"; };
 		5E79A9CB23AEAC6D00CA375D /* ArchivableTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchivableTask.h; sourceTree = "<group>"; };
 		5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchivableTask.m; sourceTree = "<group>"; };
-		5E79A9D923AFF2D400CA375D /* ArchivedTaskDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivedTaskDataSource.m; sourceTree = "<group>"; };
-		5E79A9DA23AFF2D400CA375D /* ArchivedTaskDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivedTaskDataSource.h; sourceTree = "<group>"; };
+		5E79A9D923AFF2D400CA375D /* ArchivedTaskDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchivedTaskDataController.m; sourceTree = "<group>"; };
+		5E79A9DA23AFF2D400CA375D /* ArchivedTaskDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchivedTaskDataController.h; sourceTree = "<group>"; };
 		5E79A9DC23AFF36200CA375D /* PendingTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PendingTasksViewController.h; sourceTree = "<group>"; };
 		5E79A9DD23AFF36200CA375D /* PendingTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PendingTasksViewController.m; sourceTree = "<group>"; };
 		5E79A9DF23AFF44000CA375D /* Task+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+CoreDataClass.h"; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 				5E79A9E123AFF44000CA375D /* Task+CoreDataProperties.m */,
 				5E79A9DC23AFF36200CA375D /* PendingTasksViewController.h */,
 				5E79A9DD23AFF36200CA375D /* PendingTasksViewController.m */,
-				5E79A9DA23AFF2D400CA375D /* ArchivedTaskDataSource.h */,
-				5E79A9D923AFF2D400CA375D /* ArchivedTaskDataSource.m */,
+				5E79A9DA23AFF2D400CA375D /* ArchivedTaskDataController.h */,
+				5E79A9D923AFF2D400CA375D /* ArchivedTaskDataController.m */,
 				5E79A9CB23AEAC6D00CA375D /* ArchivableTask.h */,
 				5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */,
 				5E79A96F23AD7F5700CA375D /* AppDelegate.h */,
@@ -465,7 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E79A98523AD7F5A00CA375D /* main.m in Sources */,
-				5E79A9DB23AFF2D400CA375D /* ArchivedTaskDataSource.m in Sources */,
+				5E79A9DB23AFF2D400CA375D /* ArchivedTaskDataController.m in Sources */,
 				5E79A9BB23AD8CCE00CA375D /* CompletedTaskCell.m in Sources */,
 				5E79A97D23AD7F5700CA375D /* Objc_ToDoList.xcdatamodeld in Sources */,
 				5E79A9DE23AFF36200CA375D /* PendingTasksViewController.m in Sources */,

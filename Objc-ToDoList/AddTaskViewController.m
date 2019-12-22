@@ -7,7 +7,7 @@
 //
 
 #import "AddTaskViewController.h"
-#import "ArchivedTaskDataSource.h"
+#import "ArchivedTaskDataController.h"
 
 @interface AddTaskViewController ()
 
@@ -53,7 +53,7 @@
     newTask.dueDate = _datePicker.date;
     newTask.completed = false;
     
-    ArchivedTaskDataSource *dataController = [ArchivedTaskDataSource new];
+    ArchivedTaskDataController *dataController = [ArchivedTaskDataController new];
     [dataController addNewTask:newTask];
 }
 

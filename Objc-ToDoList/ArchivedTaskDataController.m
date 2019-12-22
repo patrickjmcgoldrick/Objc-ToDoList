@@ -6,15 +6,15 @@
 //  Copyright © 2019 dirtbag. All rights reserved.
 //
 
-#import "ArchivedTaskDataSource.h"
+#import "ArchivedTaskDataController.h"
 
-@interface ArchivedTaskDataSource()
+@interface ArchivedTaskDataController()
 
 - (void)save:(NSMutableArray *)tasks :(NSString *)key;
 
 @end
 
-@implementation ArchivedTaskDataSource
+@implementation ArchivedTaskDataController
 
 const NSString *PENDING_TASKS_KEY = @"PendingTasks";
 const NSString *COMPLETED_TASKS_KEY = @"CompltedTasks";
