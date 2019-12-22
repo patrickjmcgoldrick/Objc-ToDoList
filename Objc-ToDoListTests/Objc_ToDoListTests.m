@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "ArchivableTask.h"
+#import "AppDelegate.h"
 
 @interface Objc_ToDoListTests : XCTestCase
 
@@ -53,6 +54,35 @@
     
     NSArray *readTasks = [NSKeyedUnarchiver unarchiveObjectWithData:tasksData];
     //[XCTAssertEqual [readTasks count], 2]; //, @"Expected 2 rows")];
+}
+
+// MARK: Core Data
+- (void) testCoreDate {
+    
+    AppDelegate *appDelegate;
+    NSManagedObjectContext *context;
+
+    appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    context = appDelegate.persistentContainer.viewContext;
+    /*
+    // Save Data
+    NSManagedObject *entityObject = [NSEntityDescription insertNewObjectForEntityForName:@"Task" inManagedObjectContext: context];
+    [entityObject setValue:@"Costco" forKey:@"title"];
+    [entityObject setValue:@"Pho\nChicken" forKey:@"desc"];
+    [entityObject setValue:[[NSDate alloc] init] forKey:@"createdDate"];
+    [entityObject setValue:[[NSDate alloc] init] forKey:@"dueDate"];
+    [entityObject setValue:[[NSDate alloc] init] forKey:@"completedDate"];
+    [entityObject setValue:false forKey:@"completed"];
+    
+    [appDelegate saveContext];
+    */
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Task"];
+    NSArray *tasks = [context executeFetchRequest:fetchRequest error:nil];
+    
+    for(int i=0; i<[tasks count]; i++) {
+        NSLog(@"title: %@", [tasks[i] title]);
+        NSLog(@"desc: %@", [tasks[i] desc]);
+    }
 }
 
 - (void)testPerformanceExample {
