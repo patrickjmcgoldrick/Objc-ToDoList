@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CompletedTaskCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblCompleted;
+
 @end
 
 NS_ASSUME_NONNULL_END

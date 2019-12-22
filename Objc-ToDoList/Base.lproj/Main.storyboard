@@ -90,7 +90,7 @@
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                            <real key="value" value="6"/>
+                                                            <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                                             <color key="value" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -283,7 +283,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CompletedCell" rowHeight="68" id="9iJ-eg-GPQ" customClass="CompletedTaskCell" customModule="Objc_ToDoList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CompletedCell" rowHeight="68" id="9iJ-eg-GPQ" customClass="CompletedTaskCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9iJ-eg-GPQ" id="x7O-OX-iak">
@@ -296,13 +296,13 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Completed: 09/25/2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-gu-RT9">
-                                                    <rect key="frame" x="196" y="39" width="164" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Completed: 09/25/2019" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXL-gu-RT9">
+                                                    <rect key="frame" x="76" y="39" width="284" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ua-gX-N8E" customClass="BEMCheckBox">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ua-gX-N8E" customClass="BEMCheckBox">
                                                     <rect key="frame" x="16" y="12" width="44" height="44"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -312,7 +312,7 @@
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                                            <real key="value" value="6"/>
+                                                            <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -320,6 +320,7 @@
                                             <constraints>
                                                 <constraint firstItem="JXL-gu-RT9" firstAttribute="bottom" secondItem="x7O-OX-iak" secondAttribute="bottomMargin" id="ArC-23-DBl"/>
                                                 <constraint firstItem="xBi-bM-9Ib" firstAttribute="top" secondItem="x7O-OX-iak" secondAttribute="topMargin" id="DVh-Vl-dWD"/>
+                                                <constraint firstItem="JXL-gu-RT9" firstAttribute="leading" secondItem="5Ua-gX-N8E" secondAttribute="trailing" constant="16" id="Dhg-pZ-15j"/>
                                                 <constraint firstItem="5Ua-gX-N8E" firstAttribute="centerY" secondItem="x7O-OX-iak" secondAttribute="centerY" id="Jf3-WQ-u8A"/>
                                                 <constraint firstItem="xBi-bM-9Ib" firstAttribute="leading" secondItem="5Ua-gX-N8E" secondAttribute="trailing" constant="16" id="KYx-rq-DYi"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="JXL-gu-RT9" secondAttribute="trailing" id="OT3-8q-kc1"/>
@@ -328,6 +329,10 @@
                                                 <constraint firstItem="xBi-bM-9Ib" firstAttribute="trailing" secondItem="x7O-OX-iak" secondAttribute="trailingMargin" id="mbR-bU-Spj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblCompleted" destination="JXL-gu-RT9" id="sVd-cJ-rmR"/>
+                                            <outlet property="lblTitle" destination="xBi-bM-9Ib" id="BnX-ux-cez"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -342,6 +347,9 @@
                         <viewLayoutGuide key="safeArea" id="Wp3-Ar-djv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Completed" id="MsR-kR-dBn"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vys-GA-Q0A" id="yzf-E3-kmA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFc-cO-g9o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

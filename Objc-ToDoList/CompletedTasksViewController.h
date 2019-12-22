@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CompletedTasksViewController : UIViewController
+@interface CompletedTasksViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
 

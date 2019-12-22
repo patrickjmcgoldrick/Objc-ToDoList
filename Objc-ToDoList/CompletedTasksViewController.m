@@ -8,15 +8,36 @@
 
 #import "CompletedTasksViewController.h"
 
+#import "ArchivedTaskDataSource.h"
+#import "CompletedTaskCell.h"
+
 @interface CompletedTasksViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation CompletedTasksViewController
 
+ArchivedTaskDataSource *dataController;
+
+NSMutableArray *completedTasks;
+
+// MARK: ViewDidLoad
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    
+    dataController = [ArchivedTaskDataSource new];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    completedTasks = [dataController getCompletedTasks];
+    [self.tableView reloadData];
 }
 
 /*
@@ -28,5 +49,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return completedTasks.count;
+}
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    static NSString *completedCellId = @"CompletedCell";
+    CompletedTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:completedCellId];
+
+    ArchivableTask *task = completedTasks[(int)indexPath.row];
+    cell.lblTitle.text = task.title;
+    cell.lblCompleted.text = @"Done!";
+    
+    return cell;
+}
+
 
 @end
