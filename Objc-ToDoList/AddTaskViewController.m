@@ -7,8 +7,12 @@
 //
 
 #import "AddTaskViewController.h"
+#import "ArchivedTaskDataSource.h"
 
 @interface AddTaskViewController ()
+
+- (IBAction)btnSaveAction:(id)sender;
+- (Boolean)inputsAreInvalid;
 
 @end
 
@@ -16,9 +20,52 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    // setup Date Formatter
+    self.dateFormatter = [NSDateFormatter new];
+    self.dateFormatter.dateFormat = @"MM/dd/yyyy";
+
+    // setup Date Picker
+    self.datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
+    [self.datePicker setDatePickerMode:UIDatePickerModeDate];
+    [self.datePicker addTarget:self action:@selector(onDatePickerValueChanged:) forControlEvents:UIControlEventValueChanged];
+    self.tfDueDate.inputView = self.datePicker;
+    [self onDatePickerValueChanged:self.datePicker];
+}
+
+- (void)onDatePickerValueChanged:(UIDatePicker *)datePicker {
+    self.tfDueDate.text = [self.dateFormatter stringFromDate:datePicker.date];
+}
+
+- (IBAction)btnSaveAction:(id)sender {
+  
+    if ([self inputsAreInvalid]) { return; }
     
+    ArchivableTask *newTask = [ArchivableTask new];
+    newTask.createdDate = [NSDate new];
+    newTask.title = _tfTitle.text;
+    newTask.desc = _tfDesc.text;
+    newTask.dueDate = _datePicker.date;
+    newTask.completed = false;
+    
+    ArchivedTaskDataSource *dataController = [ArchivedTaskDataSource new];
+    [dataController addNewTask:newTask];
+}
+
+// Adjust Error label, if inputs are not valid
+- (Boolean)inputsAreInvalid {
+ 
+    if ([_tfTitle.text isEqualToString:@""]) {
+        _lblErrors.text = @"Please provide a Title.";
+        return TRUE;
+    }
+    
+    if ([_tfDesc.text isEqualToString:@""]) {
+        _lblErrors.text = @"Description is missing. Please provide one.";
+        return TRUE;
+    }
+    
+    return FALSE;
 }
 
 /*

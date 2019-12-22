@@ -26,6 +26,7 @@
 		5E79A9C923AE9FCD00CA375D /* Task+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9C723AE9FCD00CA375D /* Task+CoreDataClass.m */; };
 		5E79A9CA23AE9FCD00CA375D /* Task+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9C823AE9FCD00CA375D /* Task+CoreDataProperties.m */; };
 		5E79A9CD23AEAC6D00CA375D /* ArchivableTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */; };
+		5E79A9D523AEC44200CA375D /* ArchivedTaskDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9D423AEC44200CA375D /* ArchivedTaskDataSource.m */; };
 		8BF12D21C0DBCE3919771D9A /* Pods_Objc_ToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397CA1475D048B656BBC016F /* Pods_Objc_ToDoList.framework */; };
 		B1E5D8B6D58FE940DD91C180 /* Pods_Objc_ToDoList_Objc_ToDoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4162FEE56B937B10370D964A /* Pods_Objc_ToDoList_Objc_ToDoListUITests.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		5E79A9C823AE9FCD00CA375D /* Task+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Task+CoreDataProperties.m"; sourceTree = SOURCE_ROOT; };
 		5E79A9CB23AEAC6D00CA375D /* ArchivableTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchivableTask.h; sourceTree = "<group>"; };
 		5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchivableTask.m; sourceTree = "<group>"; };
+		5E79A9D323AEC44200CA375D /* ArchivedTaskDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchivedTaskDataSource.h; sourceTree = SOURCE_ROOT; };
+		5E79A9D423AEC44200CA375D /* ArchivedTaskDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchivedTaskDataSource.m; sourceTree = SOURCE_ROOT; };
 		8E3D3E3196EB6B548B06506B /* Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig"; path = "Target Support Files/Pods-Objc-ToDoList-Objc-ToDoListUITests/Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C546582D2CC6091551EFE4E /* Pods-Objc-ToDoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc-ToDoListTests.release.xcconfig"; path = "Target Support Files/Pods-Objc-ToDoListTests/Pods-Objc-ToDoListTests.release.xcconfig"; sourceTree = "<group>"; };
 		E9A9E6E8F6666452347D5828 /* Pods_Objc_ToDoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objc_ToDoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,12 +150,14 @@
 		5E79A96E23AD7F5700CA375D /* Objc-ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				5E79A9C523AE9FCD00CA375D /* Task+CoreDataProperties.h */,
-				5E79A9C623AE9FCD00CA375D /* Task+CoreDataClass.h */,
-				5E79A9C723AE9FCD00CA375D /* Task+CoreDataClass.m */,
-				5E79A9C823AE9FCD00CA375D /* Task+CoreDataProperties.m */,
+				5E79A9D323AEC44200CA375D /* ArchivedTaskDataSource.h */,
+				5E79A9D423AEC44200CA375D /* ArchivedTaskDataSource.m */,
 				5E79A9CB23AEAC6D00CA375D /* ArchivableTask.h */,
 				5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */,
+				5E79A9C523AE9FCD00CA375D /* Task+CoreDataProperties.h */,
+				5E79A9C823AE9FCD00CA375D /* Task+CoreDataProperties.m */,
+				5E79A9C623AE9FCD00CA375D /* Task+CoreDataClass.h */,
+				5E79A9C723AE9FCD00CA375D /* Task+CoreDataClass.m */,
 				5E79A96F23AD7F5700CA375D /* AppDelegate.h */,
 				5E79A97023AD7F5700CA375D /* AppDelegate.m */,
 				5E79A97223AD7F5700CA375D /* SceneDelegate.h */,
@@ -292,6 +297,7 @@
 				TargetAttributes = {
 					5E79A96B23AD7F5700CA375D = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					5E79A98923AD7F5A00CA375D = {
 						CreatedOnToolsVersion = 11.3;
@@ -459,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E79A98523AD7F5A00CA375D /* main.m in Sources */,
+				5E79A9D523AEC44200CA375D /* ArchivedTaskDataSource.m in Sources */,
 				5E79A9BB23AD8CCE00CA375D /* CompletedTaskCell.m in Sources */,
 				5E79A9CA23AE9FCD00CA375D /* Task+CoreDataProperties.m in Sources */,
 				5E79A9B523AD813700CA375D /* PendingTasksViewController.m in Sources */,
@@ -640,6 +647,7 @@
 			baseConfigurationReference = 120C88F70C2C6240BF38534D /* Pods-Objc-ToDoList.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Objc-ToDoList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -648,6 +656,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcgoldricksolutions.Objc-ToDoList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objc-ToDoList/Objc-ToDoList-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -657,6 +668,7 @@
 			baseConfigurationReference = 0833009B6B22A7D674DC79F7 /* Pods-Objc-ToDoList.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Objc-ToDoList/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -665,6 +677,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mcgoldricksolutions.Objc-ToDoList";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Objc-ToDoList/Objc-ToDoList-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

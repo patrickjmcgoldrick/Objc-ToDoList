@@ -126,6 +126,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="bemCheckBox" destination="82Y-aB-pVa" id="VLJ-PF-gAB"/>
+                                            <outlet property="lblDesc" destination="5vn-BL-VDR" id="WBc-pT-Kmj"/>
+                                            <outlet property="lblDueDate" destination="U0L-Xk-Qlb" id="Kpc-1e-P7P"/>
                                             <outlet property="lblTitle" destination="9Ig-WS-2aW" id="2OP-A7-1Fr"/>
                                         </connections>
                                     </tableViewCell>
@@ -168,7 +171,7 @@
         <!--Add Task-->
         <scene sceneID="E6z-EH-xfr">
             <objects>
-                <viewController id="WeZ-Vj-tYo" customClass="AddTaskViewController" customModule="Objc_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WeZ-Vj-tYo" customClass="AddTaskViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UnY-1k-Q8T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -217,6 +220,9 @@
                                     <constraint firstAttribute="height" constant="60" id="SeN-u6-BbS"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSaveAction:" destination="WeZ-Vj-tYo" eventType="touchUpInside" id="e1U-UH-Ya8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Errors..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLc-Pw-RRx">
                                 <rect key="frame" x="16" y="423" width="343" height="20.5"/>
@@ -254,8 +260,18 @@
                         <viewLayoutGuide key="safeArea" id="DCS-hs-MpV"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Task" id="62w-IE-v2q">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="gwf-aj-iQ9"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="gwf-aj-iQ9">
+                            <connections>
+                                <action selector="btnSaveAction:" destination="WeZ-Vj-tYo" id="bps-8z-fEc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="lblErrors" destination="aLc-Pw-RRx" id="LuU-3n-vjL"/>
+                        <outlet property="tfDesc" destination="TSz-rH-eVm" id="8FE-JA-fL7"/>
+                        <outlet property="tfDueDate" destination="Rk1-oy-Ttl" id="tgB-Yy-gNL"/>
+                        <outlet property="tfTitle" destination="Ffp-zJ-hLz" id="Qca-xA-op4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ov7-jp-JnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

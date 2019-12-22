@@ -10,13 +10,13 @@
 #import "PendingTaskCell.h"
 #import "AppDelegate.h"
 //#import "Task+CoreDataProperties.h"
-#import "ArchivableTask.h"
+#import "ArchivedTaskDataSource.h"
 
 @interface PendingTasksViewController ()  {
     
     __weak IBOutlet UITableView *tableView;
     
-    NSMutableArray *nameArray;
+    NSMutableArray *pendingTasks;
     
     AppDelegate *appDelegate;
     NSManagedObjectContext *context;
@@ -31,43 +31,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *notes = 
-    // Do any additional setup after loading the view.
-    nameArray = [NSMutableArray arrayWithArray: @[@"Patrick", @"Jennifer", @"Tim", @"Maureen"]];
-/*
-    testArchiver();
+    [self reloadArchiveData];
+          
+//    [self testCoreDate];
 }
 
-// MARK: Archiver
-- (void) testArchiver {
-*/
-    ArchivableTask *task1 = [[ArchivableTask alloc]init];
-    task1.createdDate = [[NSDate alloc]init];
-    task1.title = @"Hello World";
-    task1.desc = @"foo bar";
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
-    ArchivableTask *task2 = [[ArchivableTask alloc]init];
-    task2.createdDate = [[NSDate alloc]init];
-    task2.title = @"This is another task";
-    task2.desc = @"blah blah";
-
-    NSMutableArray *tasks = [NSMutableArray arrayWithArray: @[task1]];
-                             
-    [tasks addObject:task2];
-    // Given `tasks` contains an array of ArchiverTask objects
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:tasks];
-    [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"tasks"];
-
-    NSData *tasksData = [[NSUserDefaults standardUserDefaults] objectForKey:@"tasks"];
-    NSArray *readTasks = [NSKeyedUnarchiver unarchiveObjectWithData:tasksData];
-    
-    NSLog(@"title: %@", [readTasks[1] title]);
-    NSLog(@"desc: %@", [readTasks[1] desc]);
+    NSLog(@"viewDidAppear");
+    [self reloadArchiveData];
+    tableView.reloadData;
 }
 
+- (void)reloadArchiveData {
+    
+    ArchivedTaskDataSource *dataController = [ArchivedTaskDataSource new];
+    NSMutableArray *pendingArray = [dataController getPendingTasks];
+
+    if (pendingArray != nil) {
+        pendingTasks = pendingArray;
+    } else {
+        pendingTasks = [NSMutableArray array];
+    }
+}
 // MARK: Core Data
 - (void) testCoreDate {
-    
     
     appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     context = appDelegate.persistentContainer.viewContext;
@@ -84,18 +73,19 @@
     [appDelegate saveContext];
     */
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Task"];
-    NSArray *tasks = [context executeRequest:fetchRequest error:nil];
+    NSArray *tasks = [context executeFetchRequest:fetchRequest error:nil];
     
-    
-    NSLog(@"title: %@", [tasks valueForKey:@"desc"]);
-    
-    
+
+    for(int i=0; i<[tasks count]; i++) {
+        NSLog(@"title: %@", [tasks[i] title]);
+        NSLog(@"desc: %@", [tasks[i] desc]);
+    }
 
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return nameArray.count;
+    return pendingTasks.count;
 }
 
 
@@ -104,8 +94,10 @@
     static NSString *pendingCellId = @"PendingCell";
     PendingTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:pendingCellId];
     
-    cell.lblTitle.text = nameArray[(int)indexPath.row];
-    
+    cell.lblTitle.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).title;
+    cell.lblDesc.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).desc;
+    //cell.lblDueDate.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).desc;
+
     return cell;
 }
 

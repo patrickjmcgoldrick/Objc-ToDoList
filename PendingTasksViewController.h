@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PendingTasksViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+- (void) testCoreDate;
+
 @end
 
 NS_ASSUME_NONNULL_END
