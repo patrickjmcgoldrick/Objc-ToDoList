@@ -27,6 +27,7 @@
 		5E79A9DE23AFF36200CA375D /* PendingTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9DD23AFF36200CA375D /* PendingTasksViewController.m */; };
 		5E79A9E323AFF44000CA375D /* Task+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9E123AFF44000CA375D /* Task+CoreDataProperties.m */; };
 		5E79A9E423AFF44000CA375D /* Task+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9E223AFF44000CA375D /* Task+CoreDataClass.m */; };
+		5E79A9ED23B018BD00CA375D /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E79A9EC23B018BD00CA375D /* NSDate+Utils.m */; };
 		8BF12D21C0DBCE3919771D9A /* Pods_Objc_ToDoList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397CA1475D048B656BBC016F /* Pods_Objc_ToDoList.framework */; };
 		B1E5D8B6D58FE940DD91C180 /* Pods_Objc_ToDoList_Objc_ToDoListUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4162FEE56B937B10370D964A /* Pods_Objc_ToDoList_Objc_ToDoListUITests.framework */; };
 /* End PBXBuildFile section */
@@ -91,6 +92,8 @@
 		5E79A9E023AFF44000CA375D /* Task+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+CoreDataProperties.h"; sourceTree = "<group>"; };
 		5E79A9E123AFF44000CA375D /* Task+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+CoreDataProperties.m"; sourceTree = "<group>"; };
 		5E79A9E223AFF44000CA375D /* Task+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+CoreDataClass.m"; sourceTree = "<group>"; };
+		5E79A9EB23B018BC00CA375D /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		5E79A9EC23B018BD00CA375D /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
 		8E3D3E3196EB6B548B06506B /* Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig"; path = "Target Support Files/Pods-Objc-ToDoList-Objc-ToDoListUITests/Pods-Objc-ToDoList-Objc-ToDoListUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C546582D2CC6091551EFE4E /* Pods-Objc-ToDoListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Objc-ToDoListTests.release.xcconfig"; path = "Target Support Files/Pods-Objc-ToDoListTests/Pods-Objc-ToDoListTests.release.xcconfig"; sourceTree = "<group>"; };
 		E9A9E6E8F6666452347D5828 /* Pods_Objc_ToDoListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objc_ToDoListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +153,8 @@
 		5E79A96E23AD7F5700CA375D /* Objc-ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				5E79A9EB23B018BC00CA375D /* NSDate+Utils.h */,
+				5E79A9EC23B018BD00CA375D /* NSDate+Utils.m */,
 				5E79A9DF23AFF44000CA375D /* Task+CoreDataClass.h */,
 				5E79A9E223AFF44000CA375D /* Task+CoreDataClass.m */,
 				5E79A9E023AFF44000CA375D /* Task+CoreDataProperties.h */,
@@ -468,6 +473,7 @@
 				5E79A9DB23AFF2D400CA375D /* ArchivedTaskDataController.m in Sources */,
 				5E79A9BB23AD8CCE00CA375D /* CompletedTaskCell.m in Sources */,
 				5E79A97D23AD7F5700CA375D /* Objc_ToDoList.xcdatamodeld in Sources */,
+				5E79A9ED23B018BD00CA375D /* NSDate+Utils.m in Sources */,
 				5E79A9DE23AFF36200CA375D /* PendingTasksViewController.m in Sources */,
 				5E79A9BE23AD8CF200CA375D /* PendingTaskCell.m in Sources */,
 				5E79A9E423AFF44000CA375D /* Task+CoreDataClass.m in Sources */,
