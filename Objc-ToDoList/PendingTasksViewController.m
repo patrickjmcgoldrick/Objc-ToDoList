@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "ArchivedTaskDataController.h"
+#import "NSDate+Utils.h"
 #import "PendingTaskCell.h"
 
 @interface PendingTasksViewController ()  {
@@ -32,11 +33,12 @@
 
     // setup Date Formatter
     self.dateFormatter = [NSDateFormatter new];
-    self.dateFormatter.dateFormat = @"MM/dd/yyyy";
+    self.dateFormatter.dateFormat = @"'Due: 'MM/dd/yyyy";
 
     [self reloadArchiveData];
 }
 
+// MARK: ViewDidAppear
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 
@@ -67,11 +69,22 @@
     static NSString *pendingCellId = @"PendingCell";
     PendingTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:pendingCellId];
     
-    cell.lblTitle.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).title;
-    cell.lblDesc.text = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).desc;
-    NSDate *date = ((ArchivableTask *)pendingTasks[(int)indexPath.row]).dueDate;
-    NSString *dateString = [NSString stringWithFormat:@"Due: %@", [self.dateFormatter stringFromDate:date]];
-    cell.lblDueDate.text = dateString;
+    ArchivableTask *task = (ArchivableTask *)pendingTasks[(int)indexPath.row];
+    
+    cell.lblTitle.text = task.title;
+    cell.lblDesc.text = task.desc;
+    
+    // adjust DueDate display
+    NSDate *dueDate = [task.dueDate startOfDay];
+    NSDate *today = [[NSDate new]startOfDay];
+    cell.lblDueDate.text = [self.dateFormatter stringFromDate:dueDate];
+    if (dueDate < today) {
+        cell.lblDueDate.textColor = UIColor.redColor;
+        cell.bemCheckBox.tintColor = UIColor.redColor;
+    } else {
+        cell.lblDueDate.textColor = UIColor.blackColor;
+        cell.bemCheckBox.tintColor = UIColor.greenColor;
+    }
     
     // BEM Checkbox
     cell.bemCheckBox.delegate = self;

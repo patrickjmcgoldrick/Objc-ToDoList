@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSDate (Utils)
 
-+ (NSDate *)startOfDay;
+- (NSDate *)startOfDay;
 
 @end
 

@@ -9,7 +9,7 @@
 #import "NSDate+Utils.h"
 
 @implementation NSDate (Utils)
-+ (NSDate *)startOfDay {
+- (NSDate *)startOfDay {
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDate *date = [calendar startOfDayForDate:self];
     return date;
