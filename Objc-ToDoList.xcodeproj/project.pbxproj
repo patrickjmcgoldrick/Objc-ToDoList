@@ -128,6 +128,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E78BF7E23B04569006E6C14 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5E79A9EB23B018BC00CA375D /* NSDate+Utils.h */,
+				5E79A9EC23B018BD00CA375D /* NSDate+Utils.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		5E78BF7F23B0459D006E6C14 /* Pending */ = {
+			isa = PBXGroup;
+			children = (
+				5E79A9DC23AFF36200CA375D /* PendingTasksViewController.h */,
+				5E79A9DD23AFF36200CA375D /* PendingTasksViewController.m */,
+				5E79A9BC23AD8CF200CA375D /* PendingTaskCell.h */,
+				5E79A9BD23AD8CF200CA375D /* PendingTaskCell.m */,
+			);
+			path = Pending;
+			sourceTree = "<group>";
+		};
+		5E78BF8023B045DB006E6C14 /* Completed */ = {
+			isa = PBXGroup;
+			children = (
+				5E79A9AD23AD80F200CA375D /* CompletedTasksViewController.h */,
+				5E79A9AE23AD80F200CA375D /* CompletedTasksViewController.m */,
+				5E79A9B923AD8CCD00CA375D /* CompletedTaskCell.h */,
+				5E79A9BA23AD8CCD00CA375D /* CompletedTaskCell.m */,
+			);
+			path = Completed;
+			sourceTree = "<group>";
+		};
+		5E78BF8123B04609006E6C14 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5E79A9DF23AFF44000CA375D /* Task+CoreDataClass.h */,
+				5E79A9E223AFF44000CA375D /* Task+CoreDataClass.m */,
+				5E79A9E023AFF44000CA375D /* Task+CoreDataProperties.h */,
+				5E79A9E123AFF44000CA375D /* Task+CoreDataProperties.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5E78BF8223B04634006E6C14 /* ArchiveData */ = {
+			isa = PBXGroup;
+			children = (
+				5E79A9DA23AFF2D400CA375D /* ArchivedTaskDataController.h */,
+				5E79A9D923AFF2D400CA375D /* ArchivedTaskDataController.m */,
+				5E79A9CB23AEAC6D00CA375D /* ArchivableTask.h */,
+				5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */,
+			);
+			path = ArchiveData;
+			sourceTree = "<group>";
+		};
+		5E78BF8323B04660006E6C14 /* AddTask */ = {
+			isa = PBXGroup;
+			children = (
+				5E79A9B623AD818000CA375D /* AddTaskViewController.h */,
+				5E79A9B723AD818000CA375D /* AddTaskViewController.m */,
+			);
+			path = AddTask;
+			sourceTree = "<group>";
+		};
+		5E78BF8423B046C2006E6C14 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5E79A9AA23AD80BA00CA375D /* SettingsViewController.h */,
+				5E79A9AB23AD80BA00CA375D /* SettingsViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		5E79A96323AD7F5700CA375D = {
 			isa = PBXGroup;
 			children = (
@@ -153,32 +224,17 @@
 		5E79A96E23AD7F5700CA375D /* Objc-ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				5E79A9EB23B018BC00CA375D /* NSDate+Utils.h */,
-				5E79A9EC23B018BD00CA375D /* NSDate+Utils.m */,
-				5E79A9DF23AFF44000CA375D /* Task+CoreDataClass.h */,
-				5E79A9E223AFF44000CA375D /* Task+CoreDataClass.m */,
-				5E79A9E023AFF44000CA375D /* Task+CoreDataProperties.h */,
-				5E79A9E123AFF44000CA375D /* Task+CoreDataProperties.m */,
-				5E79A9DC23AFF36200CA375D /* PendingTasksViewController.h */,
-				5E79A9DD23AFF36200CA375D /* PendingTasksViewController.m */,
-				5E79A9DA23AFF2D400CA375D /* ArchivedTaskDataController.h */,
-				5E79A9D923AFF2D400CA375D /* ArchivedTaskDataController.m */,
-				5E79A9CB23AEAC6D00CA375D /* ArchivableTask.h */,
-				5E79A9CC23AEAC6D00CA375D /* ArchivableTask.m */,
+				5E78BF8223B04634006E6C14 /* ArchiveData */,
+				5E78BF8123B04609006E6C14 /* CoreData */,
+				5E78BF7F23B0459D006E6C14 /* Pending */,
+				5E78BF8323B04660006E6C14 /* AddTask */,
+				5E78BF8023B045DB006E6C14 /* Completed */,
+				5E78BF8423B046C2006E6C14 /* Settings */,
+				5E78BF7E23B04569006E6C14 /* Categories */,
 				5E79A96F23AD7F5700CA375D /* AppDelegate.h */,
 				5E79A97023AD7F5700CA375D /* AppDelegate.m */,
 				5E79A97223AD7F5700CA375D /* SceneDelegate.h */,
 				5E79A97323AD7F5700CA375D /* SceneDelegate.m */,
-				5E79A9BC23AD8CF200CA375D /* PendingTaskCell.h */,
-				5E79A9BD23AD8CF200CA375D /* PendingTaskCell.m */,
-				5E79A9B623AD818000CA375D /* AddTaskViewController.h */,
-				5E79A9B723AD818000CA375D /* AddTaskViewController.m */,
-				5E79A9AD23AD80F200CA375D /* CompletedTasksViewController.h */,
-				5E79A9AE23AD80F200CA375D /* CompletedTasksViewController.m */,
-				5E79A9B923AD8CCD00CA375D /* CompletedTaskCell.h */,
-				5E79A9BA23AD8CCD00CA375D /* CompletedTaskCell.m */,
-				5E79A9AA23AD80BA00CA375D /* SettingsViewController.h */,
-				5E79A9AB23AD80BA00CA375D /* SettingsViewController.m */,
 				5E79A97E23AD7F5A00CA375D /* Assets.xcassets */,
 				5E79A98023AD7F5A00CA375D /* LaunchScreen.storyboard */,
 				5E79A97823AD7F5700CA375D /* Main.storyboard */,
